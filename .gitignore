@@ -72,3 +72,11 @@ modules/
 *.py
 __pycache__/
 Scripts/
+Backup1/
+logs.log
+*_ES.*
+вырезанный код.pas
+Инфа/2022-08-20_21-11-54.png
+Инфа/cluster2.json
+Инфа/cookies_deviant.json
+Инфа/Как в альбомах.png

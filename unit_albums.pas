@@ -43,8 +43,8 @@ begin
   for i := 0 to sl.Count-1 do
     sl[i] := inttostr(i) + ') ' + sl[i];
 
-
   listbox1.Items.Assign(sl);
+  sl.Free;
 //  listbox1.Items.LoadFromFile(fnAlbumsList, TEncoding.UTF8);
 //  (listbox1.Items as TStringList).Sort;
 end;

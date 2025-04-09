@@ -2,18 +2,21 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 638
-  ClientWidth = 924
+  ClientHeight = 711
+  ClientWidth = 957
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OldCreateOrder = True
+  Position = poDesktopCenter
   OnCreate = FormCreate
   OnMouseWheelDown = FormMouseWheelDown
   OnMouseWheelUp = FormMouseWheelUp
   OnPaint = FormPaint
+  OnResize = FormResize
   PixelsPerInch = 96
   TextHeight = 15
   object Image8: TImage
@@ -26,15 +29,15 @@ object Form1: TForm1
   object Panel_top: TPanel
     Left = 0
     Top = 0
-    Width = 924
+    Width = 957
     Height = 41
     Align = alTop
     TabOrder = 0
     object Label1: TLabel
       Left = 321
       Top = 22
-      Width = 18
-      Height = 13
+      Width = 20
+      Height = 15
       Caption = #61515#9654
       Font.Charset = ANSI_CHARSET
       Font.Color = clMaroon
@@ -63,14 +66,15 @@ object Form1: TForm1
       Text = '5456'
       Visible = False
     end
-    object BitBtn2: TBitBtn
+    object btnLoad: TBitBtn
       Left = 10
       Top = 10
-      Width = 75
+      Width = 105
       Height = 25
-      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100
+      Caption = #1055#1086#1082#1072#1079#1072#1090#1100' 40 '#1092#1086#1090#1086
       TabOrder = 2
-      OnClick = BitBtn2Click
+      OnClick = btnLoadClick
+      OnMouseEnter = btnLoadMouseEnter
     end
     object btnAddManyToAlbum: TBitBtn
       Left = 437
@@ -83,6 +87,7 @@ object Form1: TForm1
       TabOrder = 3
       Visible = False
       OnClick = btnAddManyToAlbumClick
+      OnMouseEnter = btnLoadMouseEnter
     end
     object btnAddToAlbumPrototype: TBitBtn
       Left = 808
@@ -101,8 +106,8 @@ object Form1: TForm1
       OnClick = btnAddToAlbumClick
     end
     object checkboxImage: TCheckBox
-      Left = 261
-      Top = 4
+      Left = 258
+      Top = 6
       Width = 35
       Height = 31
       TabOrder = 5
@@ -145,6 +150,7 @@ object Form1: TForm1
       TabOrder = 9
       Visible = False
       OnClick = btnCancelClick
+      OnMouseEnter = btnLoadMouseEnter
     end
     object btnUpdateScripts: TBitBtn
       Left = 808
@@ -154,18 +160,20 @@ object Form1: TForm1
       Caption = #1054#1073#1085#1086#1074#1080#1090#1100' '#1089#1082#1088#1080#1087#1090#1099
       TabOrder = 10
       OnClick = btnUpdateScriptsClick
+      OnMouseEnter = btnLoadMouseEnter
     end
-    object BitBtn4: TBitBtn
+    object btnHide: TBitBtn
       Left = 518
       Top = 10
       Width = 75
       Height = 25
-      Hint = #1059#1076#1072#1083#1080#1090#1100' '#1092#1086#1090#1082#1080' '#1080#1079' '#1074#1099#1076#1072#1095#1080' ('#1085#1077' '#1091#1076#1072#1083#1103#1077#1090' '#1089' '#1071#1085#1076#1077#1082#1089'.'#1076#1080#1089#1082#1072')'
+      Hint = #1059#1073#1088#1072#1090#1100' '#1092#1086#1090#1086'/'#1074#1080#1076#1077#1086' '#1089' '#1101#1090#1086#1081' '#1087#1072#1085#1077#1083#1080' ('#1085#1077' '#1091#1076#1072#1083#1103#1077#1090' '#1089' '#1071#1085#1076#1077#1082#1089'.'#1076#1080#1089#1082#1072')'
       Caption = #10134' '#1059#1073#1088#1072#1090#1100
       ParentShowHint = False
       ShowHint = True
       TabOrder = 11
-      OnClick = BitBtn4Click
+      OnClick = btnHideClick
+      OnMouseEnter = btnLoadMouseEnter
     end
     object btnSelectAll: TBitBtn
       Left = 299
@@ -177,6 +185,7 @@ object Form1: TForm1
       ShowHint = True
       TabOrder = 12
       OnClick = btnSelectAllClick
+      OnMouseEnter = btnLoadMouseEnter
     end
     object BitBtn5: TBitBtn
       Left = 599
@@ -185,24 +194,27 @@ object Form1: TForm1
       Height = 25
       Hint = 
         #1055#1086#1084#1077#1090#1080#1090#1100' '#1088#1077#1096#1105#1090#1082#1086#1081', '#1075#1086#1074#1086#1088#1103', '#1095#1090#1086' '#1084#1099' '#1103#1082#1086#1073#1099' '#1087#1086#1083#1086#1078#1080#1083#1080' '#1092#1086#1090#1082#1091' '#1074' '#1082#1072#1082#1086#1081'-'#1090 +
-        #1086' '#1072#1083#1100#1073#1086#1084
+        #1086' '#1072#1083#1100#1073#1086#1084' '#1080' '#1085#1077' '#1074#1099#1076#1072#1074#1072#1090#1100' '#1077#1105' '#1074' '#1076#1072#1083#1100#1085#1077#1081#1096#1080#1093' '#1074#1099#1076#1072#1095#1072#1093
       Caption = #1055#1086#1084#1077#1090#1080#1090#1100' #'
       ParentShowHint = False
       ShowHint = True
       TabOrder = 13
       OnClick = BitBtn5Click
+      OnMouseEnter = btnLoadMouseEnter
     end
     object btnDelete: TBitBtn
       Left = 355
       Top = 10
       Width = 75
       Height = 25
+      Hint = #1059#1076#1072#1083#1080#1090#1100' '#1074#1099#1073#1088#1072#1085#1085#1099#1077' '#1092#1086#1090#1086'/'#1074#1080#1076#1077#1086' '#1089' '#1071#1085#1076#1077#1082#1089'.'#1044#1080#1089#1082#1072
       Caption = #10006' '#1059#1076#1072#1083#1080#1090#1100
       ParentShowHint = False
       ShowHint = True
       TabOrder = 14
       Visible = False
       OnClick = btnDeleteClick
+      OnMouseEnter = btnLoadMouseEnter
     end
     object btnUpdateAlbums: TBitBtn
       Left = 689
@@ -212,33 +224,39 @@ object Form1: TForm1
       Caption = #1054#1073#1085#1086#1074#1080#1090#1100' '#1072#1083#1100#1073#1086#1084#1099
       TabOrder = 15
       OnClick = btnUpdateAlbumsClick
+      OnMouseEnter = btnLoadMouseEnter
     end
   end
   object ScrollBar1: TScrollBar
-    Left = 907
+    Left = 940
     Top = 41
     Width = 17
-    Height = 439
+    Height = 585
     Align = alRight
     Kind = sbVertical
-    PageSize = 0
+    PageSize = 100
     TabOrder = 1
+    Visible = False
     OnChange = ScrollBar1Change
   end
   object Panel3: TPanel
     Left = 0
     Top = 41
-    Width = 907
-    Height = 439
+    Width = 940
+    Height = 585
     Align = alClient
+    DoubleBuffered = True
+    ParentDoubleBuffered = False
     TabOrder = 2
     object Panel1: TPanel
-      Left = 0
-      Top = 6
-      Width = 924
-      Height = 433
+      Left = 1
+      Top = 2
+      Width = 939
+      Height = 601
       Align = alCustom
-      Anchors = [akLeft, akTop, akBottom]
+      Anchors = [akLeft, akTop, akRight]
+      DoubleBuffered = True
+      ParentDoubleBuffered = False
       TabOrder = 0
       OnResize = Panel1Resize
       object Image1: TImage
@@ -10045,7 +10063,6 @@ object Form1: TForm1
         OnMouseEnter = Image1MouseEnter
         OnMouseLeave = Image1MouseLeave
         OnMouseMove = Image1MouseMove
-        OnMouseUp = Image1MouseUp
       end
       object Image2: TImage
         Left = 202
@@ -10091,27 +10108,34 @@ object Form1: TForm1
       end
     end
   end
-  object Memo1: TMemo
-    Left = 0
-    Top = 480
-    Width = 924
-    Height = 139
-    Align = alBottom
-    Alignment = taCenter
-    Lines.Strings = (
-      'Memo1')
-    ScrollBars = ssBoth
-    TabOrder = 3
-  end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 619
-    Width = 924
+    Top = 692
+    Width = 957
     Height = 19
     Panels = <>
     SimplePanel = True
   end
+  object Panel2: TPanel
+    Left = 0
+    Top = 626
+    Width = 957
+    Height = 66
+    Align = alBottom
+    Caption = 'Panel2'
+    TabOrder = 4
+    object Memo1: TMemo
+      Left = 1
+      Top = 1
+      Width = 955
+      Height = 64
+      Align = alClient
+      ScrollBars = ssVertical
+      TabOrder = 0
+    end
+  end
   object IdHTTP1: TIdHTTP
+    AllowCookies = True
     HandleRedirects = True
     ProxyParams.BasicAuthentication = False
     ProxyParams.ProxyPort = 0
